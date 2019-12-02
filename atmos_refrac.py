@@ -26,7 +26,6 @@
 # 
 # \[copy and paste an example output here\]
 
-# In[ ]:
 
 
 import numpy as np
@@ -44,13 +43,7 @@ from astropy.table import Table
 from astropy.io import fits
 
 
-# In[ ]:
-
-
 Time(np.array([datetime.utcnow()]), scale='utc').value
-
-
-# In[19]:
 
 
 def atmospheric_refraction(wavelength=np.array([400, 500, 600, 700, 800]), input_times=np.array([1]), latitude=20.71, 
@@ -160,9 +153,6 @@ atmospheric_refraction()
 #atmospheric_refraction(input_times = np.array([2458278.2, 2454629.564])) 
 
 
-# In[ ]:
-
-
 times_1day = np.arange(86400)
 times20Jul = 2458319.5 + times_1day / 86400 
 wavelengths = np.array([541, 589.6, 617.3, 769.9])
@@ -179,8 +169,6 @@ print(atmrefr1.shape)
 
 print("done")
 
-
-# In[ ]:
 
 
 input_times = Time(np.array([2445090.5]), format='jd',scale='utc')
@@ -204,8 +192,6 @@ print(atmrefr1)
 
 times20Jul = nd.arange(86400)
 
-
-# In[ ]:
 
 
 def offsets(wavelength=np.array([400, 500, 600, 700, 800]), input_times=np.array([1]), latitude=20.71, longitude=-156.25, altitude=3055., air_temp=20., air_pressure=100000., humidity=75., co2_conc=380., verbose=0):
@@ -249,8 +235,6 @@ def offsets(wavelength=np.array([400, 500, 600, 700, 800]), input_times=np.array
 offsets(verbose=2)
 #offsets(input_times=np.array([2458278.2, 2454629.564]))
 
-
-# In[ ]:
 
 
 def img_scl_change(wavelength=np.array([400, 500, 600, 700, 800]), input_times=2458281.2837603 + np.arange(60)/1440, latitude=20.71, longitude=-156.25, altitude=3055., air_temp=20., air_pressure=100000., humidity=75., co2_conc=380., verbose=0):
